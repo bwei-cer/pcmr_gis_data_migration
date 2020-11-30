@@ -1,6 +1,6 @@
 import pyodbc
 import pandas as pd
-import numpy as np
+
 
 conn = pyodbc.connect('Driver={SQL Server};'
                       'Server=DSQL23CAP;'
