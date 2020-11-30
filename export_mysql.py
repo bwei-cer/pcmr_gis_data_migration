@@ -1,8 +1,8 @@
 import pandas as pd
 import mysql.connector
 
-db_username = 'dsteam'
-db_password = 'dsteam456'
+db_username = ''
+db_password = ''
 conn = mysql.connector.connect(host='os25.neb-one.gc.ca',
                                database='pcmr',
                                user=db_username,
