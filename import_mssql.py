@@ -167,7 +167,7 @@ for index, row in df_issue.iterrows():
             int(row['pdf_table_id']),
             int(row['row_index']),
             row['vec_simple'],
-            row['subvec_simple'] if str(row['subvec_simple']) is str else None
+            row['subvec_simple'] if type(row['subvec_simple']) is str else None
         )
     )
     conn.commit()
