@@ -1,13 +1,13 @@
 import pandas as pd
 import mysql.connector
 
+from load_env_variables import mysql_server, mysql_db, mysql_db_username, mysql_db_password
 
-db_username = ''
-db_password = ''
-conn = mysql.connector.connect(host='os25.neb-one.gc.ca',
-                               database='pcmr',
-                               user=db_username,
-                               password=db_password)
+
+conn = mysql.connector.connect(host=mysql_server,
+                               database=mysql_db,
+                               user=mysql_db_username,
+                               password=mysql_db_password)
 
 print(conn.is_connected())
 

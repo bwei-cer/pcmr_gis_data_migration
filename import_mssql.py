@@ -1,10 +1,12 @@
 import pyodbc
 import pandas as pd
 
+from load_env_variables import mssql_server, mssql_db
 
-conn = pyodbc.connect('Driver={SQL Server};'
-                      'Server=DSQL23CAP;'
-                      'Database=DS_TEST;'
+
+conn = pyodbc.connect('Driver={SQL Server};' +
+                      'Server={};'.format(mssql_server) +
+                      'Database={};'.format(mssql_db) +
                       'Trusted_Connection=yes;')
 cursor = conn.cursor()
 
